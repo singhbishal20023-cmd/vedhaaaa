@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vedha 💖</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Comic Sans MS, cursive;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.box {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    width: 350px;
+    position: relative;
+}
+
+h1 { color: #ff4081; }
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.yes {
+    background: #ff4081;
+    color: white;
+}
+
+.no {
+    background: #ccc;
+    position: relative;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Vedhaaaa 🥺💖</h1>
+    <p id="question">Naa Valentine avthava? 💕</p>
+
+    <button class="yes" onclick="yesClick()">YESSS 😆💗</button>
+    <button class="no" id="noBtn" onmouseover="moveNo()">No 🙄</button>
+</div>
+
+<script>
+
+function moveNo() {
+    const btn = document.getElementById("noBtn");
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+
+    btn.style.position = "absolute";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+
+function yesClick() {
+    document.body.innerHTML = `
+    <div style="
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        background:linear-gradient(135deg,#ff4b5c,#ff7eb3);
+        color:white;
+        text-align:center;
+        font-family:Comic Sans MS;
+        padding:20px;">
+        
+        <div>
+            <h1>YAYYYY VEDHAAAA 😭💖</h1>
+            <p>You just made me the happiest person right now.</p>
+            <p>I promise to always make you smile 😊</p>
+            <p>From today… it’s officially Vedha ❤️ Bishal 💘</p>
+        </div>
+    </div>
+    `;
+}
+
+</script>
+
+</body>
+</html>
